@@ -10,5 +10,5 @@ public interface CategoryService {
   Category create(Category category, SaloonDTO saloon);
   Set<Category> getAllBySaloonId(Long saloonId);
   Category getById(Long id);
-  void delete(Long id);
+  void delete(Long id, Long saloonId);
 }
