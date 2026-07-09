@@ -24,10 +24,12 @@ public class SaloonCategoryController {
     return ResponseEntity.ok(savedCategory);
   }
 
-  @DeleteMapping("/{categoryId}/{saloonId]")
-  public ResponseEntity<Void> getCategoriesBySaloon(@RequestParam Long categoryId, @RequestParam Long saloonId){
+  @DeleteMapping("/{categoryId}")
+  public ResponseEntity<Void> deleteCategory(@PathVariable Long categoryId){
+    SaloonDTO saloonDTO = new SaloonDTO();
+    saloonDTO.setId(1L);
 
-    categoryService.delete(categoryId, saloonId);
+    categoryService.delete(categoryId, saloonDTO.getId());
     return ResponseEntity.noContent().build();
   }
 }

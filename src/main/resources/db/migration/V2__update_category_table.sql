@@ -1,0 +1,3 @@
+ALTER TABLE category DROP COLUMN description;
+ALTER TABLE category ADD COLUMN image VARCHAR(255);
+ALTER TABLE category ADD COLUMN saloon_id BIGINT NOT NULL;
